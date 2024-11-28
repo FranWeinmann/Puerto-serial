@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP Final Back</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Selecciona un Input Type</h1>
+        </header>
+
+        <main>
+            <form id="userInputForm">
+                <div class="form-group">
+                    <label for="inputType">Selecciona el tipo de input:</label>
+                    <select id="inputType">
+                        <option value="text">Texto</option>
+                        <option value="color">Color</option>
+                        <option value="date">Fecha</option>
+                        <option value="number">Número</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="userInput">Ingresa el valor:</label>
+                    <input type="text" id="userInput" placeholder="Escribe aquí...">
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+
+            <div id="result" class="hidden">
+                <h2>Has enviado:</h2>
+                <p id="submittedValue"></p>
+                <div class="mostrarColor"></div>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.4/socket.io.js"></script>
+    <script src="socket.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
